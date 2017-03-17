@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+{% if tasks %}<meteval-results>
+
+{% for task in tasks %}{{task}}
+{% endfor %}</meteval-results>
+{% else %}<meteval-results />
+{% endif %}
