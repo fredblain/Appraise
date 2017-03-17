@@ -9,24 +9,24 @@
 {% endif %}
 
   <div class="jumbotron">
-    <h1><strong>Welcome to Appraise!</strong></</h1>
-    <h3><strong>An open-source system for manual evaluation of MT output</strong></h3>
+    <h1><strong>Welcome!</strong></</h1>
+    <h3><strong>This is Appraise, an open-source system for manual evaluation of MT output</strong></h3>
 
     <div class="panel panel-primary" style="margin-top: 20px;">
       <div class="panel-heading">
-        <h3 class="panel-title"><strong>This is Appraise</strong></h3>
+        <h3 class="panel-title"><strong>METEVAL</strong></h3>
       </div>
       <div class="panel-body">
-        <p><small>It supports collaborative collection of human feedback for MT evaluation. It implements tasks such as <em>Translation Quality Checking</em>, <em>Ranking and Error Classification</em>, and <em>Manual Post-Editing</em>.</small></p>
+        <p><small>Dear annotator, the objective of METEVAL is to confirm the ability of our in-house designed procedure to discriminate the most informative translation within a list of translation candidates. The data to be given to you consists of an either English, German or Czech sentence associated with a list of translation candidates in on the of the others two languages. Your contribution in this experiment is thus to rank the list of translation candidates from the best (rank1) to the worse (rank5) according to the given source sentence. </small></p>
       </div>
     </div>
 
     <div class="col-md-12 col-md-offset-1">
       <div class="col-md-5">
-        <a class="btn btn-default btn-lg btn-block" href="{% url appraise.wmt16.views.overview %}" role="button">Access WMT16 evaluation &raquo;</a>
+        <a class="btn btn-default btn-lg btn-block" href="{% url appraise.meteval.views.overview %}" role="button">Access METEVAL &raquo;</a>
       </div>
       <div class="col-md-5">
-        <a class="btn btn-primary btn-lg btn-block" href="{% url appraise.wmt16.views.signup %}" role="button">Sign up for WMT16 &raquo;</a>
+        <a class="btn btn-primary btn-lg btn-block" href="{% url appraise.meteval.views.signup %}" role="button">Sign up for METEVAL &raquo;</a>
       </div>
     </div>
     
