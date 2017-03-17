@@ -14,11 +14,12 @@ try:
 
 except ImportError:
     ROOT_PATH = os.getcwd()
-    DEPLOYMENT_PREFIX = 'appraise/'
+    DEPLOYMENT_PREFIX = ''
     DEBUG = True
 
     ADMINS = (
       # ('Your Name', 'your_email@domain.com'),
+        ('Fred Blain', 'f.blain@sheffield.ac.uk'),
     )
     MANAGERS = ADMINS
 
@@ -77,11 +78,11 @@ LOGOUT_URL = '/{0}logout/'.format(DEPLOYMENT_PREFIX)
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Europe/Berlin'
+TIME_ZONE = 'Europe/London'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
 SITE_ID = 1
 

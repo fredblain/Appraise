@@ -22,3 +22,5 @@ fi
 #
 # /path/to/bin/python manage.py runfcgi host=127.0.0.1 port=1234 method=threaded pidfile=$DJANGO_PID
 # /path/to/sbin/lighttpd -f /path/to/lighttpd/etc/appraise.conf
+/usr/local/bin/python2.7 manage.py runfcgi host=127.0.0.1 port=1309 method=threaded pidfile=$DJANGO_PID
+/usr/sbin/lighttpd -f /export/data/fred/exps/appraise/appraise/appraise-lighttpd.conf
