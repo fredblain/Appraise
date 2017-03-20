@@ -34,77 +34,17 @@ LANGUAGE_PAIR_CHOICES = (
   # News task languages
   ('eng2ces', 'English → Czech'),
   ('eng2deu', 'English → German'),
-  ('eng2fin', 'English → Finnish'),
-  ('eng2rom', 'English → Romanian'),
-  ('eng2rus', 'English → Russian'),
-  ('eng2trk', 'English → Turkish'),
   ('ces2eng', 'Czech → English'),
   ('deu2eng', 'German → English'),
-  ('fin2eng', 'Finnish → English'),
-  ('rom2eng', 'Romanian → English'),
-  ('rus2eng', 'Russian → English'),
-  ('trk2eng', 'Turkish → English'),
-  # IT task languages
-  ('eng2bul', 'English → Bulgarian'),
-  ('eng2esn', 'English → Spanish'),
-  ('eng2baq', 'English → Basque'),
-  ('eng2nld', 'English → Dutch'),
-  ('eng2ptb', 'English → Portguese'),
 )
 
 ISO639_3_TO_NAME_MAPPING = {
   'ces': 'Czech', 'cze': 'Czech', 'deu': 'German', 'ger': 'German',
-  'eng': 'English', 'esn': 'Spanish', 'spa': 'Spanish', 'fra': 'French',
-  'fre': 'French', 'rus': 'Russian', 'fin': 'Finnish', 'rom': 'Romanian',
-  'ron': 'Romanian', 'trk': 'Turkish', 'tur': 'Turkish', 'eus': 'Basque',
-  'baq': 'Basque', 'bul': 'Bulgarian', 'nld': 'Dutch', 'ptb': 'Portguese',
+  'eng': 'English',
 }
 
 GROUP_HIT_REQUIREMENTS = {
-  # volunteers
-  'MSR': 0,
-  'MTMA': 0,
-
-  # NewsTask participants
-  'Aalto': 100,
-  'Abu-Matran': 300,
-  'AFRL-MITLL': 400,
-  'AMU-UEDIN': 200,
-  'CMU': 100,
-  'CUNI': 500,
-  'JHU': 1600,
-  'KIT': 300,
-  'KIT-LIMSI': 100,
-  'LIMSI': 300,
-  'LMU-CUNI': 100,
-  'METAMIND': 100,
-  'TBTK': 200,
-  'Cambridge': 100,
-  'NRC': 100,
-  'NYU-UMontreal': 400,
-  'PJATK': 200,
-  'PROMT': 800, # 500 NewsTask, 300 ITTask
-  'QT21/HimL': 100,
-  'RWTH': 100,
-  'UEdin': 1900,
-  'UH': 400,
-  'USFD': 100,
-  'UUT': 100,
-  'YSDA': 200,
-  'JXNU-IIP': 100,
-  'UPF': 100,
-  'ParFDA': 200,
-
-  # ITTask participants
-  'Berlin': 600,
-  'Hamburg': 200,
-  'Prague': 400,
-  'Amsterdam': 200,
-  'Saarbrücken': 100,
-  'Groningen': 300,
-  'Sofia': 200,
-  'Donostia': 500,
-  'Lisbon': 300,
+  'METEVAL': 20,
 }
 
 
