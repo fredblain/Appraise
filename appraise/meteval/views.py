@@ -858,24 +858,33 @@ def signup(request):
     errors = None
     username = None
     email = None
-    token = None
-    project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+    # token = None
+    token = "meteval"
+    # project_choices = Project.objects.all().values_list('name', flat=True).order_by('id')
+    project_choices = [u'Meteval']
+    projects = ["Meteval"]
     project_status = set()
     languages = set()
+    datacollection_bool = None
+    participationagreement_bool = None
+    globalagreement_bool = None
 
     focus_input = 'id_username'
 
     if request.method == "POST":
         username = request.POST.get('username', None)
         email = request.POST.get('email', None)
-        token = request.POST.get('token', None)
-        projects = request.POST.getlist('projects', None)
+        # token = request.POST.get('token', None)
+        # projects = request.POST.getlist('projects', None)
         languages = request.POST.getlist('languages', None)
+        datacollection_bool = request.POST.get('datacollection')
+        participationagreement_bool = request.POST.get('participationagreement')
+        globalagreement_bool = request.POST.get('datacollection')
 
         LOGGER.debug(projects)
         LOGGER.debug(languages)
 
-        if username and email and token and projects and languages:
+        if username and email and token and projects and languages and datacollection_bool and participationagreement_bool and globalagreement_bool:
             try:
                 # Check if given invite token is still active.
                 invite = UserInviteToken.objects.filter(token=token)
@@ -887,6 +896,7 @@ def signup(request):
 
                 # We now have a valid invite token...
                 invite = invite[0]
+                LOGGER.warning(invite)
 
                 # Check if desired username is already in use.
                 current_user = User.objects.filter(username=username)
@@ -927,9 +937,9 @@ def signup(request):
                 for eval_group in eval_groups:
                     eval_group.user_set.add(user)
 
-                # Disable invite token.
+                """# Disable invite token.
                 invite.active = False
-                invite.save()
+                invite.save()"""
 
                 # Login user and redirect to METEVAL overview page.
                 user = authenticate(username=username, password=password)
@@ -983,6 +993,15 @@ def signup(request):
         elif not languages:
             focus_input = 'id_languages'
             errors = ['invalid_languages']
+        elif not datacollection_bool:
+            focus_input = 'id_agreements'
+            errors = ['invalid_agreements']
+        elif not participationagreement_bool:
+            focus_input = 'id_agreements'
+            errors = ['invalid_agreements']
+        elif not globalagreement_bool:
+            focus_input = 'id_agreements'
+            errors = ['invalid_agreements']
 
     context = {
       'active_page': "OVERVIEW",

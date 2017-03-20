@@ -24,9 +24,10 @@
     
     <div class="panel panel-primary" style="margin-top: 20px;">
       <div class="panel-heading">
-        <h3 class="panel-title"><strong>Note</strong></h3>
+        <h3 class="panel-title"><strong>Disclaimer</strong></h3>
       </div>
       <div class="panel-body">
+        <p>Several information are collected in this experiment: an username and a personal email address (both required to sign-up with Appraise), but also the annotations you made. While your email address will be added to a draw to win an Amazon voucher worth 50GBP, only the annotations you made will be used in future research. <strong>Both your username and email address will be discarded once the experiment is done.</strong></p>
         <p><strong>Note:</strong> After submitting this form you will be redirected to the front page. If successful you will be automatically logged into a new browser session. No confirmation message will be shown.</p>
       </div>
     </div>
@@ -41,7 +42,7 @@
           <div class="input-group-addon">required</div>
           <input class="form-control" name="username" id="id_username" type="text" size="30" value="{% if username %}{{username}}{% endif %}" aria-describedby="helpUsername" />
         </div>
-        <span id="helpUsername" class="help-block">Please enter your desired username</span>
+        <span id="helpUsername" class="help-block">Please enter your desired username (will be discarded after the experiment)</span>
       </div>
     </div>
 
@@ -52,10 +53,11 @@
           <div class="input-group-addon">required</div>
           <input class="form-control" name="email" id="id_email" type="text" size="30" value="{% if email %}{{email}}{% endif %}" aria-describedby="helpEmail" />
         </div>
-        <span id="helpEmail" class="help-block">Please enter your email address</span>
+        <span id="helpEmail" class="help-block">Please enter your email address (will be discarded after the experiment)</span>
       </div>
     </div>
 
+    <!--    
     <div class="form-group">
       <label for="id_token" class="col-sm-4 control-label">Token</label>
       <div class="col-sm-4">
@@ -66,7 +68,9 @@
         <span id="helpToken" class="help-block">And also provide your invite token</span>
       </div>
     </div>
+    -->
 
+    <!--    
     <div class="form-group">
       <label for="id_projects" class="col-sm-4 control-label">Projects</label>
       <div class="col-sm-4">
@@ -81,6 +85,7 @@
         <span id="helpProjects" class="help-block">Which annotation projects will you work on?</span>
       </div>
     </div>
+    -->
 
     <div class="form-group">
       <label for="id_languages" class="col-sm-4 control-label">Languages</label>
@@ -94,6 +99,16 @@
           </select>
         </div>
         <span id="helpLanguages" class="help-block">Which target languages will you evaluate?</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="id_agreements" class="col-sm-2 control-label">Agreements</label>
+      <div class="col-sm-8">
+    <input type="checkbox" class="col-sm-offset-4 btn btn-primary" name="datacollection"> I agree for the annotations made by me to be used in future research (both my username and email address will be discarded after the experiment). (required)<br />
+    <input type="checkbox" class="col-sm-offset-4 btn btn-primary" name="participationagreement"> I understand that my participation is voluntary and that I and free to withdraw at any time without giving any reason and without there being any negative consequences. (required)<br />
+    <input type="checkbox" class="col-sm-offset-4 btn btn-primary" name="globalagreement"> I agree to take part in the above research. (required)<br />
+    <br />
       </div>
     </div>
 
