@@ -923,7 +923,8 @@ def signup(request):
                 LOGGER.debug('Evaluation languages: {0}'.format(eval_groups))
 
                 # Create new user account and add to group.
-                password = md5(invite.group.name).hexdigest()[:8]
+                # password = md5(invite.group.name).hexdigest()[:8]
+                password = email
                 user = User.objects.create_user(username, email, password)
 
                 # Update set of projects for this user.
