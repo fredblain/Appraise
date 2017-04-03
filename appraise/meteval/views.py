@@ -528,7 +528,7 @@ def status(request):
       'active_page': "STATUS",
       'global_stats': STATUS_CACHE['global_stats'],
       'language_pair_stats': STATUS_CACHE['language_pair_stats'],
-      'group_stats': STATUS_CACHE['group_stats'],
+      #'group_stats': STATUS_CACHE['group_stats'],
       'user_stats': STATUS_CACHE['user_stats'],
       'clusters': RANKINGS_CACHE.get('clusters', []),
       'admin_url': admin_url,
