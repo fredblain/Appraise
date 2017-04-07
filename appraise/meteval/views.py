@@ -522,6 +522,9 @@ def status(request):
     # Compute admin URL for super users.
     admin_url = None
     if request.user.is_superuser:
+        update_status(key='global_stats')
+        update_status(key='language_pair_stats')
+        update_status(key='user_stats')
         admin_url = reverse('admin:index')
 
     dictionary = {
